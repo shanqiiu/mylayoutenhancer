@@ -1,0 +1,41 @@
+general:
+    max_furniture: 20
+    res: 256
+    set_name: "3dfront_all"
+    suffix_name: ""
+    order_switch: 2
+paths:
+    path_input_data: "./data/input"
+    path_output_data: "./data/output"
+    path_3dfront_data: "./data/3dfront"
+    path_trained_models: "./models"
+network:
+    model_name: "3dfront_base"
+    use_ergo: False
+    use_weight: False
+    do_validate: True
+    eval_ergo_loss: False
+    use_alt_loss: False
+    epochs: 100
+    lr: 0.0001
+    batch_size: 64
+    n_layer: 12
+    n_head: 8
+    n_embd: 256
+    continue_train: False
+    continue_epoch: -1
+    init_model: null
+    init_model_epoch: "best"
+    augm_strategy: "permute"
+    use_room_masks: False
+    pred_sigma: 1.0
+    device: "cuda"
+synthesis:
+    n_scenes: 10
+    top_p: 0.9
+    top_k: 0
+    max_noncat: True
+    max_windoor: False
+    collision_check: True
+    recon_epoch: "best"
+    house_name: "Base_Room"
