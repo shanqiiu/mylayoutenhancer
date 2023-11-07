@@ -82,7 +82,7 @@ def main(argv):
     
     parser.add_argument(
         "--path_3dfront_data",
-        default="/home/shanhai/outputs/Layoutenhancer/data",
+        default="/home/shanhai/mycode/HumanCentricLayouts-main/data/3dfront",
         type=str,
         help="Where to save preprocessed 3DFRONT data"
     )
